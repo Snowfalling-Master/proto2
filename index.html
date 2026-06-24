@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정승한 | AI & 기계공학 엔지니어</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        
+        /* Fade in up animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0; /* Initial state */
+        }
+        
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        /* Ping pong bouncing animation */
+        @keyframes pingpong {
+            0% { transform: translateX(0) scale(1); }
+            50% { transform: translateX(60px) scale(0.9); }
+            100% { transform: translateX(0) scale(1); }
+        }
+        
+        .animate-pingpong {
+            animation: pingpong 1.2s infinite ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- Main Container -->
+    <main class="flex-grow flex items-center justify-center p-6 sm:p-12">
+        <div class="max-w-2xl w-full space-y-8">
+            
+            <!-- Profile Section -->
+            <section class="bg-white rounded-[2rem] p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-center animate-fade-in-up border border-slate-100 relative overflow-hidden">
+                <!-- Decorative gradient blob -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-blue-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-indigo-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+
+                <div class="relative z-10">
+                    <!-- Profile Picture Placeholder -->
+                    <div class="w-32 h-32 mx-auto rounded-full mb-6 bg-gradient-to-br from-blue-400 to-indigo-500 p-1 shadow-lg">
+                        <img src="https://placehold.co/128x128/ffffff/3b82f6?text=승한" alt="Profile Picture" class="w-full h-full object-cover rounded-full border-4 border-white">
+                    </div>
+                    
+                    <!-- Name & Badge -->
+                    <div class="inline-flex items-center justify-center gap-2 mb-2">
+                        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">정승한</h1>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full border border-blue-100">AI & Mechanical Engineer</span>
+                    </div>
+                    
+                    <!-- One-line Introduction -->
+                    <p class="text-lg sm:text-xl text-slate-600 mt-4 font-medium break-keep">
+                        "딥러닝과 유체역학의 융합으로 공학적 난제를 해결하는 연구자입니다."
+                    </p>
+                    
+                    <p class="text-sm text-slate-500 mt-4 max-w-lg mx-auto leading-relaxed break-keep">
+                        안녕하세요! 저는 AI 기술(ANN, CNN, RNN, LLM 튜닝 등)을 기계공학에 접목하여 혁신적인 해결책을 모색하는 엔지니어입니다. 특히 <strong>유체역학</strong>의 <strong>외부유동(에어포일)</strong> 분야에 깊은 관심을 가지고 있으며, 데이터 기반의 딥러닝 모델을 활용해 복잡한 유동 현상을 분석하고 최적화하는 연구를 진행하고 있습니다.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Hobby Section -->
+            <section class="bg-white rounded-[2rem] p-8 sm:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] animate-fade-in-up delay-100 border border-slate-100">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-table-tennis-paddle-ball text-orange-500"></i> My Hobby
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Ping Pong Graphic -->
+                    <div class="w-full sm:w-1/3 flex justify-center py-4 bg-slate-50 rounded-2xl relative overflow-hidden">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-table-tennis-paddle-ball text-4xl text-orange-400 rotate-45 z-10 relative bg-slate-50"></i>
+                            <div class="w-3 h-3 bg-white border border-slate-300 rounded-full shadow-sm animate-pingpong"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hobby Description -->
+                    <div class="w-full sm:w-2/3">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">열정적인 탁구 플레이어</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base break-keep">
+                            제 가장 큰 취미는 <strong>탁구</strong>입니다. 네트 너머로 빠르고 정확하게 공을 넘길 때의 짜릿함은, 마치 복잡한 공학 문제를 해결하거나 딥러닝 모델 학습이 성공적으로 끝났을 때의 쾌감과 비슷합니다. 
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base mt-2 break-keep">
+                            탁구를 통해 기르는 순발력과 집중력을 공학 연구에도 적용하여, 에어포일 주변을 유려하게 흐르는 공기처럼 빠르고 유연하게 목표를 달성하기 위해 노력합니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer class="w-full py-12 flex justify-center animate-fade-in-up delay-200">
+        <div class="text-center px-4">
+            <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Let's connect</h2>
+            
+            <!-- Gmail Button -->
+            <!-- Note: Replace 'your.email@gmail.com' with the actual email address -->
+            <a href="mailto:your.email@gmail.com" 
+               class="group relative inline-flex items-center justify-center px-8 py-4 bg-red-500 text-white font-bold rounded-full overflow-hidden shadow-[0_8px_20px_rgb(239,68,68,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgb(239,68,68,0.4)] focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">
+                
+                <!-- Hover effect background -->
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-red-400 via-red-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                
+                <!-- Button Content -->
+                <span class="relative flex items-center gap-3">
+                    <i class="fa-regular fa-envelope text-xl"></i>
+                    <span>Gmail로 연락하기</span>
+                </span>
+            </a>
+            
+            <p class="mt-8 text-xs text-slate-400">
+                © 2026 Seunghan Jeong. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
